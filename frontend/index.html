@@ -9,19 +9,21 @@
 </head>
 <body>
 <div class="orb orb1"></div><div class="orb orb2"></div>
+
 <header class="topbar">
   <a class="brand" href="#"><div class="ff">FF</div><div><b>HOJI DONATER</b><small>FREE FIRE • TJ</small></div></a>
-  <button class="lang">🇹🇯 Тоҷикӣ</button>
+  <button class="lang" type="button">🇹🇯 Тоҷикӣ</button>
 </header>
+
 <main>
 <section class="hero">
  <div>
   <span class="eyebrow">⚡ ДОНАТИ ЗУД • БЕХАТАР • ОСОН</span>
   <h1>Алмосҳои Free Fire-ро<br><span>осон ва зуд</span> гиред 💎</h1>
   <p>Пакети дилхоҳи алмосро интихоб кунед, ID-и бозигарро ворид намоед ва фармоишро созед.</p>
-  <div class="pills"><i>🔒 Пардохти бехатар</i><i>⚡ Коркарди фармоиш</i><i>🆔 Бо ID-и бозӣ</i></div>
+  <div class="pills"><i>🔒 Пардохти бехатар</i><i>⚡ Коркарди фармоиш</i><i>🧾 Чекро фиристед</i></div>
  </div>
- <div class="heroCard"><div class="biggem">💎</div><strong>10 000+</strong><small>алмосҳои дастрас</small></div>
+ <div class="heroCard"><div class="biggem">💎</div><strong>Донати Free Fire</strong><small>зуд • осон • қулай</small></div>
 </section>
 
 <section class="section">
@@ -30,27 +32,64 @@
 </section>
 
 <section class="section">
- <div class="title"><div><span class="eyebrow">ЧӢ ТАВР ХАРИД КУНЕМ?</span><h2>Танҳо 4 қадам</h2></div></div>
+ <div class="title"><div><span class="eyebrow">ЧӢ ТАВР ХАРИД КУНЕМ?</span><h2>Танҳо 5 қадам</h2></div></div>
  <div class="steps">
   <article><b>01</b><span>💎</span><h3>Пакетро интихоб кунед</h3><p>Миқдори алмосҳои лозимаро интихоб намоед.</p></article>
-  <article><b>02</b><span>🆔</span><h3>ID-ро ворид кунед</h3><p>Танҳо ID-и Free Fire-и худро дуруст нависед.</p></article>
-  <article><b>03</b><span>💳</span><h3>Пардохт кунед</h3><p>Пардохт карда, чекро фиристед.</p></article>
-  <article><b>04</b><span>🚀</span><h3>Алмосҳоро гиред</h3><p>Пас аз тасдиқи пардохт фармоиш коркард мешавад.</p></article>
+  <article><b>02</b><span>🆔</span><h3>ID-ро ворид кунед</h3><p>ID-и Free Fire-и худро дуруст нависед.</p></article>
+  <article><b>03</b><span>💳</span><h3>Пардохт кунед</h3><p>Маблағи фармоишро пардохт кунед.</p></article>
+  <article><b>04</b><span>🧾</span><h3>Чекро фиристед</h3><p>Акси чеки пардохтро интихоб ва бор кунед.</p></article>
+  <article><b>05</b><span>🚀</span><h3>Фармоиш тасдиқ мешавад</h3><p>Пас аз санҷиш фармоиш ба коркард меравад.</p></article>
  </div>
 </section>
 
 <section id="order" class="order" hidden>
- <div class="orderTop"><div><span class="eyebrow">ФАРМОИШ</span><h2>Маълумоти фармоиш</h2></div><button id="close">×</button></div>
+ <div class="orderTop"><div><span class="eyebrow">ҚАДАМИ 1</span><h2>Маълумоти фармоиш</h2></div><button id="close" type="button">×</button></div>
  <div id="selected" class="selected"></div>
  <label for="playerId">🆔 ID-и Free Fire</label>
  <input id="playerId" inputmode="numeric" maxlength="20" placeholder="Мисол: 1234567890">
- <p class="hint">ID-ро аз профили Free Fire нусха карда ворид кунед. Пеш аз пардохт онро санҷед.</p>
- <button id="continue" class="primary">Идома додан →</button>
+ <p class="hint">Пароли аккаунт лозим нест. Танҳо ID-и бозӣ.</p>
+ <button id="toPayment" class="primary" type="button">Ба пардохт гузаштан →</button>
  <p id="message" class="message"></p>
 </section>
 
-<section class="notice"><span>🛡️</span><div><b>Муҳим</b><p>Мо ҳеҷ гоҳ пароли аккаунти Free Fire-и шуморо намепурсем. Барои фармоиш танҳо ID-и бозӣ лозим аст.</p></div></section>
+<section id="payment" class="payment" hidden>
+ <div class="orderTop"><div><span class="eyebrow">ҚАДАМИ 2</span><h2>Пардохти фармоиш</h2></div><button id="backOrder" type="button">←</button></div>
+ <div id="paymentSummary" class="summary"></div>
+ <div class="paybox">
+   <div class="pay-icon">💳</div>
+   <h3>Пардохтро анҷом диҳед</h3>
+   <p>Маблағи фармоишро бо усули пардохти дастрас пардохт кунед. Дар ин V0.3 маълумоти пардохт намунавӣ мебошад.</p>
+   <div class="fake-pay">💰 <span id="payAmount"></span></div>
+ </div>
+ <button id="paid" class="primary" type="button">Ман пардохт кардам →</button>
+</section>
+
+<section id="receipt" class="payment" hidden>
+ <div class="orderTop"><div><span class="eyebrow">ҚАДАМИ 3</span><h2>Фиристодани чек 🧾</h2></div></div>
+ <div class="summary" id="receiptSummary"></div>
+ <label class="upload" for="receiptInput">
+   <span>📷</span><b>Акси чеки пардохтро интихоб кунед</b>
+   <small>JPG, PNG ё WEBP • танҳо барои санҷиши фармоиш</small>
+ </label>
+ <input id="receiptInput" type="file" accept="image/jpeg,image/png,image/webp" hidden>
+ <div id="previewWrap" class="previewWrap" hidden><img id="preview" alt="Пешнамоиши чек"><button id="removeReceipt" type="button">Нест кардан</button></div>
+ <button id="submitOrder" class="primary" type="button" disabled>📤 Фиристодани фармоиш</button>
+ <p id="receiptMessage" class="message"></p>
+</section>
+
+<section id="success" class="success" hidden>
+ <div class="successIcon">✓</div>
+ <span class="eyebrow">ФАРМОИШ ҚАБУЛ ШУД</span>
+ <h2>Чек барои санҷиш фиристода шуд 🎉</h2>
+ <p>Фармоиши шумо ҳоло дар ҳолати <b>«Дар санҷиш»</b> қарор дорад.</p>
+ <div class="status"><span>⏳</span><div><b>Дар санҷиш</b><small>Пас аз пайваст кардани backend ин маълумот ба системаи фармоишҳо меравад.</small></div></div>
+ <button id="newOrder" class="secondary" type="button">Фармоиши нав</button>
+</section>
+
+<section class="notice"><span>🛡️</span><div><b>Муҳим</b><p>Мо ҳеҷ гоҳ пароли аккаунти Free Fire-и шуморо намепурсем. Барои фармоиш танҳо ID-и бозӣ лозим аст. Чекро танҳо барои тасдиқи пардохт истифода мебарем.</p></div></section>
 </main>
-<footer><b>💎 HOJI DONATER TJ</b><small>Free Fire top-up • V0.2</small></footer>
+
+<footer><b>💎 HOJI DONATER TJ</b><small>Free Fire top-up • V0.3</small></footer>
 <script src="app.js"></script>
-</body></html>
+</body>
+</html>
