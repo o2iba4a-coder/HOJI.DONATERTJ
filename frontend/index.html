@@ -68,40 +68,15 @@
 
 <section id="order" class="modal" hidden>
  <div class="modalBox">
-  <button id="closeOrder" class="close">×</button>
-  <div class="progress"><i class="active">1</i><b></b><i>2</i><b></b><i>3</i><b></b><i>4</i></div>
-  <div id="step1">
-   <div class="mini">ҚАДАМИ 1</div><h2>Маълумоти бозигар</h2>
-   <div id="selected" class="selected"></div>
-   <label>ID-и Free Fire</label><input id="playerId" inputmode="numeric" maxlength="20" placeholder="Мисол: 1234567890">
-   <p class="hint">🔒 Пароли аккаунт лозим нест.</p>
-   <button id="nextPayment" class="cta full">Идома →</button>
-   <p id="orderMsg" class="msg"></p>
-  </div>
-  <div id="step2" hidden>
-   <div class="mini">ҚАДАМИ 2</div><h2>Пардохт</h2>
-   <div id="paySummary" class="selected"></div>
-   <div class="paymentCard"><div>💳</div><b>Маблағи пардохт</b><strong id="amount"></strong><small>Дар V0.4 реквизитҳо намунавӣ мебошанд.</small></div>
-   <button id="paid" class="cta full">Ман пардохт кардам →</button>
-  </div>
-  <div id="step3" hidden>
-   <div class="mini">ҚАДАМИ 3</div><h2>Чеки пардохт 🧾</h2>
-   <div id="receiptSummary" class="selected"></div>
-   <label for="receiptInput" class="upload"><span>📷</span><b>Акси чекро интихоб кун</b><small>JPG, PNG ё WEBP</small></label>
-   <input id="receiptInput" type="file" accept="image/jpeg,image/png,image/webp" hidden>
-   <div id="previewBox" class="preview" hidden><img id="preview"><button id="remove" type="button">Нест кардан</button></div>
-   <button id="send" class="cta full" disabled>📤 Фиристодани фармоиш</button><p id="receiptMsg" class="msg"></p>
-  </div>
-  <div id="step4" hidden class="done">
-   <div class="check">✓</div><div class="mini">ҚАДАМИ 4</div><h2>Фармоиш қабул шуд!</h2>
-   <p>Чеки шумо барои санҷиш қабул гардид. Ҳолати фармоиш:</p>
-   <div class="orderStatus">⏳ <b>Дар санҷиш</b><small>Пас аз пайваст кардани backend ин фармоиш ба системаи воқеӣ фиристода мешавад.</small></div>
-   <button id="newOrder" class="ghost full">Фармоиши нав</button>
-  </div>
+  <button id="closeOrder" class="close" type="button">×</button>
+  <div class="progress"><i id="dot1" class="active">1</i><b></b><i id="dot2">2</i><b></b><i id="dot3">3</i></div>
+  <div id="step1"><div class="mini">ҚАДАМИ 1 АЗ 3</div><h2>ID-и Free Fire</h2><div id="selected" class="selected"></div><label for="playerId">🆔 ID-и бозигарро ворид кунед</label><input id="playerId" inputmode="numeric" maxlength="20" placeholder="Мисол: 1234567890"><p class="hint">🔒 Пароли аккаунт лозим нест. Танҳо ID-и Free Fire.</p><button id="continueBtn" class="cta full" type="button">Идома →</button><p id="orderMsg" class="msg"></p></div>
+  <div id="step2" hidden><div class="mini">ҚАДАМИ 2 АЗ 3</div><h2>Чеки пардохт 🧾</h2><div id="receiptSummary" class="selected"></div><label for="receiptInput" class="upload"><span>📷</span><b>Акси чекро интихоб кун</b><small>JPG, PNG ё WEBP</small></label><input id="receiptInput" type="file" accept="image/jpeg,image/png,image/webp" hidden><div id="previewBox" class="preview" hidden><img id="preview" alt="Пешнамоиши чек"><button id="remove" type="button">Нест кардан</button></div><button id="send" class="cta full" type="button" disabled>📤 Фиристодани фармоиш</button><p id="receiptMsg" class="msg"></p></div>
+  <div id="step3" hidden class="done"><div class="check">✓</div><div class="mini">ҚАДАМИ 3 АЗ 3</div><h2>Фармоиш қабул шуд!</h2><p>Маълумоти фармоиш ва чеки шумо қабул гардид.</p><div class="orderStatus">⏳ <b>Дар санҷиш</b><small>Фармоиш барои санҷиш фиристода шуд. Backend дар марҳилаи оянда пайваст мешавад.</small></div><button id="newOrder" class="ghost full" type="button">Фармоиши нав</button></div>
  </div>
 </section>
 </main>
-<footer><b>💎 HOJI DONATER TJ</b><span>Free Fire Diamonds • V0.4</span></footer>
+<footer><b>💎 HOJI DONATER TJ</b><span>Free Fire Diamonds • V0.5</span></footer>
 <script src="app.js"></script>
 </body>
 </html>
